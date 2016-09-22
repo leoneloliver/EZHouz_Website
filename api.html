@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+    <title>EZHouz API</title>
+    <link rel="icon" href="images/poh.ico" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/poh.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+    <header class="container">
+        <h1>EZHouz API</h1>
+        <h4>Group of methods that supports EZHouz app through info and statistics about zones, districts, and affordable housing in Toronto.</h4>
+        <h4>These material is extracted from Google API and city's portal, via open data.</h4>
+        <h4>[ base url: /api/v1 , api version: 1.0.0 ]</h4>
+        <h4><a href="#footer">Contact us</a></h4>
+    </header>
+
+    <!-- METHOD -->
+    <article class="container">
+        <section>
+            <h3 class="poh-method">Bedroom Configurations</h3>
+            <h4>Simple types of bedroom configuration in an affordable housing.</h4>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/bedroomconfigs</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">List of bedroom configurations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>[{"Room":" 1"}, {"Room":" 2"}, {"Room":" B"}, {"Room":"1"}, ...]</p>
+            </div>
+        </section>
+
+    </article>
+
+    <!-- METHOD -->
+    <article class="container">
+        <section>
+            <h3 class="poh-method">Districts</h3>
+            <h4>Information about districts, according to this official <a href="images/districts.jpg" target="_blank">map</a>.</h4>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/districts</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">List of districts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>[{"Id":1, "Name":"Etobicoke York", "Color":"Blue"}, ...]</p>
+            </div>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/districts/{id}</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">Details of a district</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>{"Id":1, "Name":"Etobicoke York", "Color":"Blue", "Neighborhoods":[{"Id":20, "Name":"Alderwood", "Population":11900, "ViolencePercentage":0.384474546}, ...]}</p>
+            </div>
+        </section>
+
+    </article>
+
+    <!-- METHOD -->
+    <article class="container">
+        <section>
+            <h3 class="poh-method">Housing</h3>
+            <h4>Affordable housing that belongs to social programs.</h4>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/housing</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">List of housing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>[{"Id":1, "Bedrooms":"1,2,3,1W,2W", "Name":"FOREST MANOR II", "Address":"20 HUMBERLINE DRIVE", "Provider":"PNP", "Image":"IMAGE URL", "OverallRating":1}, ...]</p>
+            </div>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/housing/{id}</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">Details of a housing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>{"Id":514, "Bedrooms":"1,2,3,4,2W", "Name":"WILCOX CREEK HOUSING CO-OPERATIVE INC", "Address":"22 FOREST CREEK PATHWAY", "Provider":"CO-OP", "Image":"IMAGE URL", "MaintenanceRating":10, "PestInfectionRating":0, "ZoneRatings":[{"Id":0, "Name":"Violence", "Value":2},...], "OverallRating":7, "Reviews":9, "Neighborhood":"Rouge", "Latitude":"43.8184267", "Longitude":"-79.21196189999999"}}</p>
+            </div>
+        </section>
+
+    </article>
+
+    <!-- METHOD -->
+    <article class="container">
+        <section>
+            <h3 class="poh-method">Zones</h3> 
+            <h4>Regions delimited in housing map, according to this <a href="images/zones.jpg" target="_blank">document</a>.</h4>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/zones</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">List of zones</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>[{"Id":1, "Name":"ZONE1"},...]</p>
+            </div>
+        </section>
+
+        <!-- VERB -->
+        <section class="panel panel-info ">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="btn btn-primary poh-btn-verb">GET</button>
+                        <span class="poh-route">/zones/{id}</span>
+                    </div>
+                    <div class="col col-sm-6 text-right">
+                        <span class="poh-verb-description">Details of a zone</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <p>response:</p>
+                <p>{"Id":1, "Name":"ZONE1", "Ratings":[], "Districts":[{"Id":1, "Name":"Etobicoke York", "Color":"Blue"}], "Wards":[{"Id":1, "Name":"Etobicoke North"}, ...], "Neighborhoods":[{"Id":1, "Name":"West Humber-Clairville", "Population":34100, "ViolencePercentage":0.5}, ...]}</p>
+            </div>
+        </section>
+
+    </article>
+
+
+    <footer id="footer" class="container">
+        <h3>Contact us</h3>
+        <blockquote>
+            <h4>Alexandre Belloni Alves <a href="https://ca.linkedin.com/in/alexandrebellonialves" target="_blank"><img src="images/linkedin.png" /></a> <a href="http://www.alexandrebelloni.com" target="_blank"><img src="images/home.png" /></a></h4>
+            <h4>Gregory Uchitel <a href="https://www.facebook.com/greglikeszen?fref=ts" target="_blank"><img src="images/home.png" /></a></h4>
+            <h4>Leonel Oliveira <a href="https://ca.linkedin.com/in/leoneloliver" target="_blank"><img src="images/linkedin.png" /> <a href="http://leoneloliveira.weebly.com" target="_blank"><img src="images/home.png" /></a></a></h4>
+        </blockquote>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.min.js" defer></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" defer></script>
+</body>
