@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .poh-method {
     font-weight: bold;
 }
@@ -32,3 +33,39 @@ border-left: 5px solid #d74545  !important;
 }
 
 
+=======
+.poh-method {
+    font-weight: bold;
+}
+
+.poh-btn-verb {
+    margin-right: 10px;
+}
+
+.poh-route {
+    font-weight: bold;
+    color: black;
+}
+
+.poh-verb-description {
+    font-weight: bold;
+}
+
+blockquote {
+border-left: 5px solid #008fb9;
+}
+
+.poh-cite {
+border-left: 5px solid #d74545  !important;
+}
+
+.poh-footer{
+    padding:10px;
+}
+
+.poh-destak{
+    color: #d74545;
+}
+
+
+>>>>>>> 00328124888888aed8165ade9a55b340ce954de2
